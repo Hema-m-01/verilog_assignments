@@ -1,0 +1,14 @@
+module comp4bit_tb;
+reg [3:0] a,b;
+wire alb,aeb,agb;
+
+comp4bit comp (alb,aeb,agb,a,b);
+initial 
+begin
+	a = 0;
+	b = 0;
+	#100 $finish();
+end
+always #10 a=$random;
+always #10 b=$random;    
+endmodule
