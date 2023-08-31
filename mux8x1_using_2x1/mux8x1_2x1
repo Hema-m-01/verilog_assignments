@@ -10,3 +10,10 @@ mux2x1 m5(w[4],w[1:0],s[1]);
 mux2x1 m6(w[5],w[3:2],s[1]);
 mux2x1 m7(y,w[5:4],s[2]);
 endmodule
+
+module mux2x1(output reg y,input [1:0]i,input s);
+always @(*)
+begin
+y=s?i[1]:i[0];
+end
+endmodule
