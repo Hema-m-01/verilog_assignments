@@ -1,0 +1,26 @@
+module comp4bit(
+    output reg alb,aeb,agb,
+	 input [3:0]a,b);
+always@(*)
+begin
+	if(a<b)
+	begin
+		alb=1;
+		aeb=0;
+		agb=0;
+	end
+	else if (a==b)
+	begin
+		alb=0;
+		aeb=1;
+		agb=0;
+	end
+	else
+	begin
+		alb=0;
+		aeb=0;
+		agb=1;
+	end
+
+end
+endmodule
